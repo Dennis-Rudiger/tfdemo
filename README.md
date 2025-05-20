@@ -3,7 +3,7 @@
 =======
 # TronRaft Africa Limited - demo Website
 
-This is the official website for TronRaft Africa Limited, a leading construction and engineering firm specializing in design & build, civil works, mechanical works, renovations, maintenance, assessments, consultancy, and landscaping services across East Africa.
+This is the demo website for TronRaft Africa Limited, a leading construction and engineering firm specializing in design & build, civil works, mechanical works, renovations, maintenance, assessments, consultancy, and landscaping services across East Africa.
 
 ## Overview
 
