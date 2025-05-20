@@ -837,3 +837,27 @@ table {
   table-layout: fixed;
   width: 100%;
 }
+
+/* Responsive base setup */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* Mobile-first media queries */
+@media screen and (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Fix any containers that might be causing overflow */
+  [class*="container"],
+  [class*="wrapper"] {
+    max-width: 100%;
+    width: 100%;
+    overflow-x: hidden;
+  }
+}

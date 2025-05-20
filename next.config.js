@@ -45,6 +45,12 @@ const nextConfig = {
 
     return config;
   },
+  // Add optimization for mobile
+  experimental: {
+    optimizeFonts: true,
+    optimizeImages: true,
+    optimizeCss: true,
+  },
 };
 
 module.exports = nextConfig;
