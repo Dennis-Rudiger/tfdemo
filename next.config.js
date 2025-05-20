@@ -24,12 +24,25 @@ const nextConfig = {
   env: {
     NEXT_PUBLIC_SITE_NAME: 'Tronraft Africa Limited',
   },
-  // Handle CSS properly
-  webpack(config) {
-    config.module.rules.push({
-      test: /\.css$/,
-      use: ['style-loader', 'css-loader', 'postcss-loader'],
+  // Configure webpack properly for CSS
+  webpack: (config) => {
+    // Fix for CSS modules
+    const rules = config.module.rules
+      .find((rule) => typeof rule.oneOf === 'object')
+      .oneOf.filter((rule) => Array.isArray(rule.use));
+
+    // Remove generator with filename property
+    rules.forEach((rule) => {
+      if (rule.use && Array.isArray(rule.use)) {
+        rule.use.forEach((moduleLoader) => {
+          if (moduleLoader.loader && moduleLoader.loader.includes('css-loader') && 
+              moduleLoader.options && moduleLoader.options.modules) {
+            delete moduleLoader.options.modules.generator;
+          }
+        });
+      }
     });
+
     return config;
   },
 };
