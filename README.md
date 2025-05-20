@@ -1,9 +1,9 @@
-<<<<<<< HEAD
+
 # trondemo
 =======
-# TronRaft Africa Limited - Official Website
+# TronRaft Africa Limited - demo Website
 
-This is the official website for TronRaft Africa Limited, a leading construction and engineering firm specializing in design & build, civil works, mechanical works, renovations, maintenance, assessments, consultancy, and landscaping services across East Africa.
+This is the demo website for TronRaft Africa Limited, a leading construction and engineering firm specializing in design & build, civil works, mechanical works, renovations, maintenance, assessments, consultancy, and landscaping services across East Africa.
 
 ## Overview
 
@@ -39,8 +39,8 @@ Built with Next.js, this website showcases TronRaft Africa's services, expertise
 
 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/tronraft-africa.git
-cd tronraft-africa
+git clone https://github.com/Dennis-Rudiger/tfdemo.git
+cd tfdemo
 ```
 
 2. Install dependencies
@@ -77,7 +77,7 @@ This project is proprietary and confidential. See the [LICENSE](LICENSE) file fo
 
 ## Contact
 
-TronRaft Africa Limited - [info@tronraftafrica.com](mailto:info@tronraftafrica.com)
 
-Website: [https://tronraft-africa.vercel.app](https://tronraft-africa.vercel.app)
->>>>>>> 3f87a6d (add project files)
+
+Website: [https://tronraftdemo.vercel.app](https://tronraftdemo.vercel.app)
+
