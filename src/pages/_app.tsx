@@ -1,35 +1,28 @@
-import '../styles/globals.css';
-import type { AppProps } from 'next/app';
-import { useEffect } from 'react';
-import Head from 'next/head';
+import React, { useEffect } from 'react';
+import { AppProps } from 'next/app';
 import Layout from '../components/layout/Layout';
-import AOS from 'aos';
+import '../styles/globals.css';
 import 'aos/dist/aos.css';
+
+// Optional: Add any third-party CSS imports here
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
-    // Initialize AOS animation library
+    // Import AOS dynamically to avoid SSR issues
+    const AOS = require('aos');
     AOS.init({
-      duration: 800,
       once: true,
-      easing: 'ease-out',
-      disable: 'mobile'
+      duration: 800,
+      easing: 'ease-out-cubic',
     });
   }, []);
 
   return (
-    <>
-      <Head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className="overflow-x-hidden w-full relative">
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </div>
-    </>
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
   );
 }
 

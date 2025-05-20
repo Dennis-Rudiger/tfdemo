@@ -24,8 +24,12 @@ const nextConfig = {
   env: {
     NEXT_PUBLIC_SITE_NAME: 'Tronraft Africa Limited',
   },
-  // Configure webpack if needed
+  // Handle CSS properly
   webpack(config) {
+    config.module.rules.push({
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader', 'postcss-loader'],
+    });
     return config;
   },
 };
