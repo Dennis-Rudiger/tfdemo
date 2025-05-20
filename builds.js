@@ -1,0 +1,6 @@
+module.exports = {
+  buildCommand: `npm run build`,
+  devCommand: `npm run dev`,
+  installCommand: `npm install`,
+  outputDirectory: '.next',
+};
